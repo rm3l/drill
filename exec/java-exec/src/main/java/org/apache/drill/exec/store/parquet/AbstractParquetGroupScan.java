@@ -186,8 +186,8 @@ public abstract class AbstractParquetGroupScan extends AbstractFileGroupScan {
 
     List<RowGroupInfo> rowGroupsForMinor = mappings.get(minorFragmentId);
 
-    Preconditions.checkArgument(!rowGroupsForMinor.isEmpty(),
-        String.format("MinorFragmentId %d has no read entries assigned", minorFragmentId));
+    //Preconditions.checkArgument(!rowGroupsForMinor.isEmpty(),
+    //    String.format("MinorFragmentId %d has no read entries assigned", minorFragmentId));
 
     List<RowGroupReadEntry> entries = new ArrayList<>();
     for (RowGroupInfo rgi : rowGroupsForMinor) {
